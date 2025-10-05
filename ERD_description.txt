@@ -1,0 +1,20 @@
+Simple ERD Description (can be drawn using dbdiagram.io or draw.io)
+
+Tables:
+1. users (id, first_name, last_name, email, password, role)
+2. categories (id, name)
+3. items (id, name, price, size, category_id)
+4. orders (id, user_id, item_id, quantity, status)
+
+Relationships:
+- Each item belongs to one category (items.category_id → categories.id)
+- Each order belongs to one user (orders.user_id → users.id)
+- Each order belongs to one item (orders.item_id → items.id)
+
+Diagram (text version):
+
+users (id) ─────┐
+                 │
+orders (user_id) ├──→ items (id) ───→ categories (id)
+                 │
+                 └── (item_id)

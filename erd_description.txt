@@ -1,0 +1,11 @@
+SIMPLE STUDENT INVENTORY MANAGEMENT SYSTEM (ERD Description)
+
+Collections:
+1. users - stores admin and user info
+2. categories - stores product categories
+3. items - stores items with name, price, size, and category
+4. orders - stores orders made by users for items
+
+Relationships:
+- items belong to categories
+- orders belong to users and items
